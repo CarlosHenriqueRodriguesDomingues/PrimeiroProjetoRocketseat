@@ -1,0 +1,134 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --text-color: white;
+  --background-image: url("imagens/bg-mobile.jpg");
+  --botao-color: rgba(255, 255, 255, 0.1);
+  --border-botao-color: rgba(255, 255, 255, 0.5);
+  --color-hover-button: rgba(255, 255, 255, 0.5);
+  --color-hover-social: rgba(255, 255, 255, 0.1);
+  --image-button: url(imagens/moon-stars.svg);
+}
+.light {
+  --text-color: black;
+  --background-image: url("imagens/bg-mobile-light.jpg");
+  --botao-color: rgba(0, 0, 0, 0.05);
+  --border-botao-color: rgba(0, 0, 0, 0.5);
+  --color-hover-button: rgba(0, 0, 0, 0.02);
+  --color-hover-social: rgba(0, 0, 0, 0.1);
+  --image-button: url(imagens/sun.svg);
+}
+
+body {
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+#conteiner {
+  width: 360px;
+  height: 700px;
+  margin: auto;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--image-button) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(0px);
+  top: 6px;
+}
+.light #switch button {
+  right: 0px;
+  left: initial;
+}
+#switch span {
+  display: block;
+  z-index: 1;
+
+  width: 64px;
+  height: 24px;
+  background: var(--botao-color);
+  border: 1px solid var(--border-botao-color);
+  border-radius: 9999px;
+  backdrop-filter: blur (4px);
+  top: 2px;
+  z-index: 1;
+}
+
+#profile {
+  text-align: center;
+}
+
+#profile img {
+  width: 120px;
+}
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  padding-top: 10px;
+  margin-top: 40px;
+}
+ul li a {
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--botao-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-botao-color);
+  backdrop-filter: blur(4px);
+  font-weight: 500px;
+  transition: background 0.2s;
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background: var(--color-hover-button);
+  border: 1.5px solid var(--text-color);
+}
+#sociais {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+  font-size: 24px;
+}
+#sociais a:hover {
+  background: 10px var(--color-hover-social);
+  border-radius: 50%;
+  padding: 16px;
+  transition: all 0.5s;
+}
+footer {
+  padding-top: 24px;
+  text-align: center;
+}
+footer a {
+  text-decoration: underline;
+}
