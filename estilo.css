@@ -54,10 +54,12 @@ body {
   position: absolute;
   transform: translateX(0px);
   top: 6px;
+  animation: slide-back 0.4s;
 }
 .light #switch button {
   right: 0px;
   left: initial;
+  animation: slide-in 0.4s;
 }
 #switch span {
   display: block;
@@ -71,6 +73,9 @@ body {
   backdrop-filter: blur (4px);
   top: 2px;
   z-index: 1;
+}
+#switch button:hover {
+  outline: 8px solid var(--botao-color);
 }
 
 #profile {
@@ -140,5 +145,21 @@ footer a {
   }
   .light {
     --background-image: url("imagens/bg-desktop-light.jpg");
+  }
+}
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
