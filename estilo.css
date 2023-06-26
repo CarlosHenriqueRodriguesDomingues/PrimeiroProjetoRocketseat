@@ -133,3 +133,12 @@ footer {
 footer a {
   text-decoration: underline;
 }
+
+@media (min-width = 700px) {
+  :root {
+    --background-image: url("imagens/bg-desktop.jpg");
+  }
+  .light {
+    --background-image: url("imagens/bg-desktop-light.jpg");
+  }
+}
