@@ -75,7 +75,7 @@ body {
   z-index: 1;
 }
 #switch button:hover {
-  outline: 8px solid var(--botao-color);
+  outline: 8px solid var(--color-hover-button);
 }
 
 #profile {
